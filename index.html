@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة زغاريد الفرح للتبرعات</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+  rel="shortcut icon"
+  href="logo.png"
+  type="image/x-icon"
+/>
+</head>
+<body>
+    <div class="fixed-message"><a href="https://wa.me/0599526992" class="fixed-message" target="_blank">تحتاج مساعدة؟</a></div>
+    
+    <!-- الرأس (Header) -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="#about">عن المنصة</a></li>
+                <li><a href="#donate">تبرع الآن</a></li>
+                <li><a href="#partners">الشركاء</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- البانر (Hero Section) -->
+
+    <section class="hero"><div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="photo1.jpg" style="width:100%">
+            <div class="text">
+                <h2>ساهم في تغيير حياة الآخرين</h2>
+                <p>تبرعاتك تحدث فرقاً كبيراً في المجتمعات التي تحتاج المساعدة.</p>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="photo2.jpg" style="width:100%">
+            <div class="text">
+                <h2>ساهم في تغيير حياة الآخرين</h2>
+                <p>تبرعاتك تحدث فرقاً كبيراً في المجتمعات التي تحتاج المساعدة.</p>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="photo3.jpg" style="width:100%">
+            <div class="text">
+                <h2>ساهم في تغيير حياة الآخرين</h2>
+                <p>تبرعاتك تحدث فرقاً كبيراً في المجتمعات التي تحتاج المساعدة.</p>
+            </div>
+            
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+   
+        <div style="text-align:center" class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span> 
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+        </div>
+    </div>
+  
+      </section>
+     
+
+
+    <!-- المشاريع (Projects) -->
+    <section id="projects" class="projects">
+        <h2>مشاريعنا</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="photo1.jpg" alt="مشروع 1">
+                <h3>مشروع بناء المدارس</h3>
+                <p>نساعد في بناء مدارس للأطفال في القرى النائية.</p>
+                <button id="toggleButton" onclick="donateNow('مشروع بناء المدارس')">تبرع الآن</button>
+            </div>
+            <div class="project-card">
+                <img src="photo2.jpg" alt="مشروع 2">
+                <h3>مشروع المياه النظيفة</h3>
+                <p>نساعد في توفير المياه النظيفة للمجتمعات التي تفتقر إليها.</p>
+                <button id="toggleButton" onclick="donateNow('مشروع المياه النظيفة')">تبرع الآن</button>
+            </div>
+        </div>
+    </section>
+    <div class="circle" id="circle"></div>
+
+    <!-- عن المنصة (About) -->
+    <section id="about" class="about">
+        <h2>عن المنصة</h2>
+        <p>زغاريد الفرح هي منصة تتيح للمستخدمين التبرع للمشاريع الخيرية المختلفة وتساهم في تحسين حياة الأفراد في المناطق المحتاجة.</p>
+    </section>
+
+    <!-- التبرع الآن (Donate Now) -->
+    <section id="donate" class="donate">
+        <h2>تبرع الآن</h2>
+        <p>اختَر المبلغ الذي ترغب في التبرع به، وكن جزءًا من التغيير.</p>
+        <form id="donationForm">
+            <label for="donationAmount">المبلغ (بالريال):</label>
+            <input type="number" id="donationAmount" required>
+
+            <label for="donorName">اسم المتبرع:</label>
+            <input type="text" id="donorName" required>
+
+            <button id="toggleButton" type="submit">تبرع الآن</button>
+        </form>
+        <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+            <h3>شكراً لتبرعك!</h3>
+            <p>تم استقبال تبرعك بنجاح. جزاك الله خيراً!</p>
+        </div>
+    </section>
+
+    <!-- الشركاء (Partners) -->
+    <section id="partners" class="partners">
+        <h2>شركاؤنا</h2>
+        <div class="partner-logos">
+            <img src="وزارة الصحة.png" alt="Partner 1">
+            <img src="وزارة الصحة.png" alt="Partner 2">
+            <img src="وزارة الصحة.png" alt="Partner 3">
+            <img src="وزارة الصحة.png" alt="Partner 4">
+            <img src="وزارة الصحة.png" alt="Partner 5">
+        </div>
+    </section>
+
+    <!-- التذييل (Footer) -->
+    <footer>
+        <p>&copy; 2024 زغاريد الفرح. جميع الحقوق محفوظة.</p><br><p>تصميم الطالب محمود شمس & حاتم سيكو</p>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>

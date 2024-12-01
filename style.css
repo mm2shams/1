@@ -1,0 +1,350 @@
+* {
+    font-family: "Tajawal", 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 20px; 
+    background-color: #1e1e1e; 
+    z-index: 1000;
+    height: 50px;  
+    overflow: visible; 
+}
+
+.logo {
+    flex-shrink: 0; 
+    position: relative; 
+    top: 30px; 
+    background-color: #333; 
+    border-radius: 25px;
+    right: 30px;
+}
+
+.logo img {
+    max-width: 150px;  
+    height: auto;  
+}
+
+nav {
+    flex-grow: 1;  
+    display: flex;  
+    justify-content: center;  
+}
+
+nav ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+}
+
+nav ul li {
+    margin-left: 20px;  
+    display: flex; 
+    align-items: center;  
+}
+
+nav ul li a {
+    text-decoration: none;  
+    color: #ffffff; 
+    font-weight: bold; 
+    transition: color 0.3s;  
+}
+
+nav ul li a:hover {
+    color: #007bff; 
+}
+
+
+.hero {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-color: #1e1e1e79; 
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides img {
+    object-fit: cover; 
+    width: 100%;  
+    max-height: 600px;  
+    height: auto;  
+}
+
+.mySlides {
+    display: none;  
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;  
+    left: 50%;  
+    transform: translateX(-50%);  
+}
+
+.dot {
+    height: 10px;  
+    width: 10px;  
+    margin: 0 5px; 
+    background-color: #bbb; 
+    border-radius: 50%;  
+    display: inline-block;  
+    transition: background-color 0.6s ease, transform 0.6s ease;  
+}
+
+.active {
+    background-color: #717171; 
+    transform: scale(1.5);  
+}
+
+.text {  /*! زبط دا */
+    position: absolute;
+    bottom: 50%;
+    right: 34px; 
+    color: white;  
+    background-color: rgba(0, 0, 0, 0.5);  
+    padding: 10px; 
+    transition: opacity 0.5s ease, transform 0.5s ease;  
+    opacity: 0;  
+    transform: translateY(20px);  
+}
+
+.text.show {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.text h2 {
+    margin: 0;  
+    font-size: 24px; 
+}
+
+.text p {
+    margin: 5px 0 0 0;  
+    font-size: 16px; 
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    color: #b1b9c2;
+}
+
+.projects {
+    padding: 50px 0;
+    background-color: #1e1e1e6f;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-card {
+    background-color: #1818183e;
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-card button:hover {
+    background-color: #004d40;
+}
+
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1e1e1e2e;
+}
+
+.about p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.donate {
+    padding: 50px 20px;
+    background-color: #1e1e1e52;
+    text-align: center;
+}
+
+.donate form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donate label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.donate input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.donate button {
+    background-color: #00796b;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donate button:hover {
+    background-color: #004d40;
+}
+
+.thank-you-message {
+    background-color: #333;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.partners {
+    padding: 50px 20px;
+    background-color: #1e1e1e99;
+    color: white;
+    text-align: center;
+}
+
+.partner-logos img {
+    width: 150px;
+    margin: 20px;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.circle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+
+/*-*/
+
+.fixed-message {
+    position: fixed;
+    right: 0; 
+    top: 20%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white; 
+    padding: 10px 15px; 
+    border-radius: 20px; 
+    z-index: 1000; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 14px; 
+    text-decoration: none; 
+    display: flex;
+    align-items: center; 
+}
+
+.fixed-message:hover {
+    background-color: #171717; 
+}
+
+.fixed-message::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px; 
+    background-color: rgb(76, 58, 58); 
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
