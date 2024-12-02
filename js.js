@@ -81,39 +81,38 @@ function showSlides() {
     timeoutId = setTimeout(() => {
         slideIndex = (slideIndex + 1) % slides.length; 
         showSlides();
-    }, 3000); 
+    }, 4000); 
 }
 
 
 /*-*/
 
-const button = document.getElementById('toggleButton');
-const circle = document.getElementById('circle');
-let isBlack = true;
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('toggleButton');
+    const circle = document.getElementById('circle');
+    let isBlack = true;
 
-button.addEventListener('click', () => {
-const size = Math.max(window.innerWidth, window.innerHeight);
+    button.addEventListener('click', () => {
+        const size = Math.max(window.innerWidth, window.innerHeight);
 
-circle.style.transition = 'none';
-circle.style.width = circle.style.height = '0';
-
-setTimeout(() => {
-requestAnimationFrame(() => {
-    circle.style.transition = 'width 0.8s, height 0.8s, background-color 0.5s';
-    circle.style.width = circle.style.height = `${size}px`;
-    circle.style.backgroundColor = isBlack ? 'white' : 'black';
-    /* حط هنا الحجات بالالوان بتاعتها */
-/*    const header = document.querySelector('header');
-    header.style.backgroundColor = isBlack ? '#1e1e1e' : '#f8f9fa';*/ /* زي دا */
-
-    document.body.style.backgroundColor = isBlack ? 'white' : 'black'; /* لو عاوز تسيبهم سبهم او عدل فيهم */
-    document.body.style.color = isBlack ? 'black' : 'white';
-    
-    isBlack = !isBlack;
-
-    setTimeout(() => {
+        circle.style.transition = 'none';
         circle.style.width = circle.style.height = '0';
-    }, 800);
-});
-}, 50);
+
+        setTimeout(() => {
+            requestAnimationFrame(() => {
+                circle.style.transition = 'width 0.8s, height 0.8s, background-color 0.5s';
+                circle.style.width = circle.style.height = `${size}px`;
+                circle.style.backgroundColor = isBlack ? 'white' : 'black';
+
+                document.body.style.backgroundColor = isBlack ? 'white' : 'black';
+                document.body.style.color = isBlack ? 'black' : 'white';
+
+                isBlack = !isBlack;
+
+                setTimeout(() => {
+                    circle.style.width = circle.style.height = '0';
+                }, 800);
+            });
+        }, 50);
+    });
 });
